@@ -1,0 +1,15 @@
+build_image:
+  image: docker:git
+  variables:
+    DOCKER_REGISTRY: home:24567
+    DOCKER_IMAGE: ${DOCKER_REGISTRY}/lop/docker-toolbox
+  services:
+    - ${DOCKER_IMAGE}
+  script:
+    - export DOCKER_PROJECT=${CI_BUILD_REPO#*/*/*/}
+    - export DOCKER_PROJECT=${DOCKER_PROJECT%.*}
+    - docker login -u gitlab-ci-token -p ${CI_BUILD_TOKEN} ${DOCKER_REGISTRY}
+    - docker build -t ${DOCKER_REGISTRY}/lop/dockertest .
+    - docker push ${DOCKER_REGISTRY}/${DOCKER_PROJECT}
+  only:
+    - master
