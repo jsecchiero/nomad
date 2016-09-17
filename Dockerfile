@@ -10,6 +10,7 @@ RUN mkdir -p /usr/local/bin                 \
   && rm /tmp/nomad.zip                      \
   && mkdir /etc/nomad
 ADD nomad-wrapper.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/nomad-wrapper.sh
 
 EXPOSE 4646
 EXPOSE 4647
