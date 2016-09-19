@@ -16,4 +16,4 @@ EXPOSE 4646
 EXPOSE 4647
 EXPOSE 4648
 
-ENTRYPOINT ["/usr/local/bin/nomad-wrapper.sh"]
+#ENTRYPOINT ["/usr/local/bin/nomad-wrapper.sh"]
