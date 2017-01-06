@@ -1,6 +1,6 @@
 FROM busybox:ubuntu-14.04
 
-ENV NOMAD_VERSION 0.4.1
+ENV NOMAD_VERSION 0.5.2
 
 ADD https://releases.hashicorp.com/nomad/${NOMAD_VERSION}/nomad_${NOMAD_VERSION}_linux_amd64.zip /tmp/nomad.zip
 RUN mkdir -p /usr/local/bin                 \
