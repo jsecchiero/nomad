@@ -14,4 +14,4 @@ EXPOSE 4646
 EXPOSE 4647
 EXPOSE 4648
 
-ENTRYPOINT ["/usr/local/bin/nomad","agent","-config=/etc/nomad.d/config.hc1"]
+ENTRYPOINT ["/usr/local/bin/nomad"]
