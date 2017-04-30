@@ -22,6 +22,7 @@ sudo docker run -d --name nomad                  \
     -data-dir=/data
 ```
 
+for armhf arch
 ```
 sudo docker run -d --name nomad                  \
     --restart=always                             \
