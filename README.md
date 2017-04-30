@@ -2,6 +2,7 @@
 Hashicorp nomad base image
 
 ## Usage
+```
 sudo docker run -d --name nomad                  \
     -p 4646:4646 -p 4646:4646/udp                \
     -p 4647:4647 -p 4647:4647/udp                \
@@ -15,4 +16,4 @@ sudo docker run -d --name nomad                  \
     -config=/etc/nomad.conf                      \
     -log-level=DEBUG                             \
     -data-dir=/data
-## 
+```
