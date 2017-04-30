@@ -5,9 +5,9 @@ ENV NOMAD_VERSION 0.5.6
 ADD https://releases.hashicorp.com/nomad/${NOMAD_VERSION}/nomad_${NOMAD_VERSION}_linux_amd64.zip /tmp/nomad.zip
 RUN mkdir -p /usr/local/sbin                 \
   && cd /usr/local/sbin                      \
-  && unzip /tmp/nomad.zip                   \
+  && unzip /tmp/nomad.zip                    \
   && chmod +x /usr/local/sbin/nomad          \
-  && rm /tmp/nomad.zip                      \
+  && rm /tmp/nomad.zip                       \
   && mkdir /etc/nomad
 
 EXPOSE 4646
