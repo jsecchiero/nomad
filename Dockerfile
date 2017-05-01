@@ -13,6 +13,8 @@ RUN mkdir -p /usr/local/sbin                 \
   && rm /tmp/nomad.zip                       \
   && mkdir /etc/nomad
 
+WORKDIR /etc/nomad
+
 EXPOSE 4646
 EXPOSE 4647
 EXPOSE 4648
