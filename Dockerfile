@@ -3,7 +3,7 @@ FROM library/ubuntu:14.04
 ENV NOMAD_VERSION 0.5.6
 
 RUN apt-get update && \
-    apt-get install unzip -y
+    apt-get install unzip git -y
 
 ADD https://releases.hashicorp.com/nomad/${NOMAD_VERSION}/nomad_${NOMAD_VERSION}_linux_amd64.zip /tmp/nomad.zip
 RUN mkdir -p /usr/local/sbin                 \
