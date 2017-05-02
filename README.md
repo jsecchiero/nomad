@@ -16,6 +16,7 @@ sudo docker run -d --name nomad                  \
     -v /etc/nomad.conf:/etc/nomad.conf           \
     -v /:/storage                                \
     -v /tmp:/tmp                                 \
+    -v /etc/ssl/certs:/etc/ssl/certs             \
     jsecchiero/nomad                             \
     agent                                        \
     -config=/etc/nomad.conf                      \
@@ -37,6 +38,7 @@ sudo docker run -d --name nomad                  \
     -v /etc/nomad.conf:/etc/nomad.conf           \
     -v /:/storage                                \
     -v /tmp:/tmp                                 \
+    -v /etc/ssl/certs:/etc/ssl/certs             \
     jsecchiero/nomad_armhf                       \
     agent                                        \
     -config=/etc/nomad.conf                      \
